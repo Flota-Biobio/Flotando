@@ -14,7 +14,10 @@
 			<span class="sticky-post"><?php _e( 'Featured', 'twentysixteen' ); ?></span>
 		<?php endif; ?>
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php the_title( sprintf( '<h2 class="entry-title">', esc_url( get_permalink() ) ), '</h2>' ); ?>
+
+        <h6 class="entry-meta">Publicado el <?php the_time('F jS, Y'); ?> por <?php the_author_posts_link(); ?>, en las categorías <?php the_category( ', ' ); ?></h6>
+
 	</header><!-- .entry-header -->
 
 	<?php //twentysixteen_excerpt(); ?>

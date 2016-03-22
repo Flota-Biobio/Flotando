@@ -93,3 +93,23 @@ function the_breadcrumb () {
         echo '</ol></div>';
     }
 }
+
+function related_posts() {
+    ?>
+    <div class="col-sm-12">
+        <h2 class="entry-title related-post-title">POSTS RELACIONADOS</h2>
+    </div>
+    <div class="col-sm-4 related-post-box">
+        <div class="related-post-img">FOTO</div>
+        <div class="related-post-permalink">Comen caca en la vía pública</div>
+    </div>
+    <div class="col-sm-4 related-post-box">
+        <div class="related-post-img">FOTO</div>
+        <div class="related-post-permalink">Comen caca en la vía pública</div>
+    </div>
+    <div class="col-sm-4 related-post-box">
+        <div class="related-post-img">FOTO</div>
+        <div class="related-post-permalink">Comen caca en la vía pública</div>
+    </div>
+    <?php
+}
