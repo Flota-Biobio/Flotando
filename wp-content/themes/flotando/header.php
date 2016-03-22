@@ -6,6 +6,8 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+
     <!-- FONTS -->
     <?php rimy_header_tag('css', 'https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900') ?>
     <?php rimy_header_tag('css', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700') ?>

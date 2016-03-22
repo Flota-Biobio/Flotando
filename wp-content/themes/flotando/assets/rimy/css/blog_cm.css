@@ -50,11 +50,26 @@
     background-color:  #ddd;
 }
 
+.arrow-down-row {
+    padding-left: 70px;
+    height: 20px;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+
+    border-top: 10px solid #5cbfdc;
+}
+
 .blog-cm .blog-title {
     margin-top: 0;
+    margin-bottom: 0;
     padding-top: 20px;
     padding-bottom: 20px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
     color: white;
@@ -68,7 +83,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     color: #8e8e8e;
-    font-size: 28px;
+    font-size: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     text-transform: uppercase;

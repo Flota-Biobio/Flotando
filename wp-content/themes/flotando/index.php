@@ -14,6 +14,9 @@ get_template_part('template-parts/boxes');
                     <div class="row">
 
                         <h2 class="blog-title col-sm-12 no-margin-bottom increase-padding">Actividad reciente</h2>
+                        <div class="arrow-down-row col-sm-12">
+                            <div class="arrow-down"></div>
+                        </div>
                         <!-- Start the Loop. -->
                         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
