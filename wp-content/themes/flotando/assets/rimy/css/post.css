@@ -1,0 +1,33 @@
+/*
+ * Proyecto Flotando
+ * Tema de WordPress
+ * @copyright   Copyright 2016 George Shazkho
+ * @license     Apache License, Version 2.0
+ */
+
+/*
+ * HOJA DE ESTILOS
+ * Header
+ *
+ * Hoja de estilos para la vista "header"
+ *
+ * @author  George Shazkho <shazkho@gmail.com>
+ * @version 1
+ * @since   0.1.3
+ */
+
+.post .entry-header .entry-title {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30;
+}
+
+.post .entry-header .entry-meta {
+    margin-bottom: 30px;
+    color: rgba(159, 159, 157, 1);
+    font-style: italic;
+}
+
+.post .entry-content {
+    font-weight: 300;
+    font-size: 20px;
+}

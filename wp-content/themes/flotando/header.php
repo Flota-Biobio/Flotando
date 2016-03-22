@@ -1,83 +1,88 @@
-<?php
-/**
- * The theme header
- * 
- * @package bootstrap-basic
- */
-?>
 <!DOCTYPE html>
-<!--[if lt IE 7]>  <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7]>     <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8]>     <html class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
-	<head>
-		<meta charset="<?php bloginfo('charset'); ?>">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><?php wp_title('|', true, 'right'); ?></title>
-		<meta name="viewport" content="width=device-width">
+<html <?php language_attributes(); ?> class="no-js">
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-		<link rel="profile" href="http://gmpg.org/xfn/11">
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-		
-		<!--wordpress head-->
-		<?php wp_head(); ?>
-	</head>
-	<body <?php body_class(); ?>>
-		<!--[if lt IE 8]>
-			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-		<![endif]-->
-		
-		
-		
-		
-		
-		<div class="container page-container">
-			<?php do_action('before'); ?> 
-			<header role="banner">
-				<div class="row row-with-vspace site-branding">
-					<div class="col-md-6 site-title">
-						<h1 class="site-title-heading">
-							<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-						</h1>
-						<div class="site-description">
-							<small>
-								<?php bloginfo('description'); ?> 
-							</small>
-						</div>
-					</div>
-					<div class="col-md-6 page-header-top-right">
-						<div class="sr-only">
-							<a href="#content" title="<?php esc_attr_e('Skip to content', 'bootstrap-basic'); ?>"><?php _e('Skip to content', 'bootstrap-basic'); ?></a>
-						</div>
-						<?php if (is_active_sidebar('header-right')) { ?> 
-						<div class="pull-right">
-							<?php dynamic_sidebar('header-right'); ?> 
-						</div>
-						<div class="clearfix"></div>
-						<?php } // endif; ?> 
-					</div>
-				</div><!--.site-branding-->
-				
-				<div class="row main-navigation">
-					<div class="col-md-12">
-						<nav class="navbar navbar-default" role="navigation">
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary-collapse">
-									<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-							</div>
-							
-							<div class="collapse navbar-collapse navbar-primary-collapse">
-								<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?> 
-								<?php dynamic_sidebar('navbar-right'); ?> 
-							</div><!--.navbar-collapse-->
-						</nav>
-					</div>
-				</div><!--.main-navigation-->
-			</header>
-			
-			
-			<div id="content" class="row row-with-vspace site-content">
+    <!-- FONTS -->
+    <?php rimy_header_tag('css', 'https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900') ?>
+    <?php rimy_header_tag('css', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700') ?>
+
+    <!-- JAVASCRIPT -->
+    <?php rimy_header_tag('js', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js') ?>
+    <?php rimy_header_tag('js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js') ?>
+    <?php rimy_header_tag('js', 'http://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js') ?>
+
+    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+
+    <!-- CSS -->
+    <?php rimy_header_tag('css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css') ?>
+    <?php rimy_header_tag('css', get_bloginfo('stylesheet_url')) ?>
+    <?php rimy_header_tag('css', ASSETS_CSS_URL . 'header.css') ?>
+    <?php rimy_header_tag('css', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css') ?>
+
+    <!--[if lt IE 9]>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
+    <![endif]-->
+
+    <?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+
+<header class="site-header">
+    <div class="header background-main">
+        <div class="container">
+            <div class="content">
+                <nav class="navbar navbar-default background-main font-300">
+
+                    <div class="container-fluid">
+                        <div class="navbar-header logo">
+                            <a class="navbar-brand logo" href="<?=get_option('home')?>">
+                                <!-- ToDo revertir dummy -->
+                                <img src="<?= ASSETS_IMG_URL ?>flotando.png" alt="Flota Biobio" />
+                            </a>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown disabled">
+                                    <a  href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        Catálogo <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Últimos productos</a></li>
+                                        <li><a href="#">Productos destacados</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Favoritos</a></li>
+                                        <li><a href="#">Carro de compras</a></li>
+                                    </ul>
+                                </li>
+                                <li class="link disabled"><a class="nav-link" href="#">Sorteos</a></li>
+
+                                <li class="dropdown">
+                                    <a  href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        Nosotros <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Proyecto</a></li>
+                                        <li><a href="http://127.0.0.1/flotando/nuestro-equipo/">Equipo</a></li>
+                                        <li><a href="#">Legal</a></li>
+                                    </ul>
+                                </li>
+                                <li class="link"><a class="nav-link" href="http://127.0.0.1/flotando/contactenos/">Contacto</a></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<?php
+the_breadcrumb();
+?>

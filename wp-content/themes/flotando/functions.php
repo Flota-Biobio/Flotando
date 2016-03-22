@@ -1,194 +1,95 @@
 <?php
-/**
- * Bootstrap Basic theme
- * 
- * @package bootstrap-basic
- */
 
-
-/**
- * Required WordPress variable.
- */
-if (!isset($content_width)) {
-	$content_width = 1170;
+function translate_date($date)
+{
+    $eng = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    $spa = [
+        'Enero', 'febrero', 'Marzo', 'Abril', 'Mayo', 'junio',
+        'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+    ];
+    return str_replace($eng, $spa, $date);
 }
 
-
-if (!function_exists('bootstrapBasicSetup')) {
-	/**
-	 * Setup theme and register support wp features.
-	 */
-	function bootstrapBasicSetup() 
-	{
-		/**
-		 * Make theme available for translation
-		 * Translations can be filed in the /languages/ directory
-		 * 
-		 * copy from underscores theme
-		 */
-		load_theme_textdomain('bootstrap-basic', get_template_directory() . '/languages');
-
-		// add theme support post and comment automatic feed links
-		add_theme_support('automatic-feed-links');
-
-		// enable support for post thumbnail or feature image on posts and pages
-		add_theme_support('post-thumbnails');
-
-		// allow the use of html5 markup
-		// @link https://codex.wordpress.org/Theme_Markup
-		add_theme_support('html5', array('caption', 'comment-form', 'comment-list', 'gallery', 'search-form'));
-
-		// add support menu
-		register_nav_menus(array(
-			'primary' => __('Primary Menu', 'bootstrap-basic'),
-		));
-
-		// add post formats support
-		add_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link'));
-
-		// add support custom background
-		add_theme_support(
-			'custom-background', 
-			apply_filters(
-				'bootstrap_basic_custom_background_args', 
-				array(
-					'default-color' => 'ffffff', 
-					'default-image' => ''
-				)
-			)
-		);
-	}// bootstrapBasicSetup
+function the_chilean_time()
+{
+    ob_start();
+    the_time('d \d\e F \d\e Y');
+    $time = ob_get_clean();
+    return translate_date($time);
 }
-add_action('after_setup_theme', 'bootstrapBasicSetup');
 
+include_once 'inc/constants.php';
 
-if (!function_exists('bootstrapBasicWidgetsInit')) {
-	/**
-	 * Register widget areas
-	 */
-	function bootstrapBasicWidgetsInit() 
-	{
-		register_sidebar(array(
-			'name'          => __('Header right', 'bootstrap-basic'),
-			'id'            => 'header-right',
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h1 class="widget-title">',
-			'after_title'   => '</h1>',
-		));
-
-		register_sidebar(array(
-			'name'          => __('Navigation bar right', 'bootstrap-basic'),
-			'id'            => 'navbar-right',
-			'before_widget' => '',
-			'after_widget'  => '',
-			'before_title'  => '',
-			'after_title'   => '',
-		));
-
-		register_sidebar(array(
-			'name'          => __('Sidebar left', 'bootstrap-basic'),
-			'id'            => 'sidebar-left',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h1 class="widget-title">',
-			'after_title'   => '</h1>',
-		));
-
-		register_sidebar(array(
-			'name'          => __('Sidebar right', 'bootstrap-basic'),
-			'id'            => 'sidebar-right',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h1 class="widget-title">',
-			'after_title'   => '</h1>',
-		));
-
-		register_sidebar(array(
-			'name'          => __('Footer left', 'bootstrap-basic'),
-			'id'            => 'footer-left',
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h1 class="widget-title">',
-			'after_title'   => '</h1>',
-		));
-
-		register_sidebar(array(
-			'name'          => __('Footer right', 'bootstrap-basic'),
-			'id'            => 'footer-right',
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h1 class="widget-title">',
-			'after_title'   => '</h1>',
-		));
-	}// bootstrapBasicWidgetsInit
-}
-add_action('widgets_init', 'bootstrapBasicWidgetsInit');
-
-
-if (!function_exists('bootstrapBasicEnqueueScripts')) {
-	/**
-	 * Enqueue scripts & styles
-	 */
-	function bootstrapBasicEnqueueScripts() 
-	{
-		wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
-		wp_enqueue_style('bootstrap-theme-style', get_template_directory_uri() . '/css/bootstrap-theme.min.css');
-		wp_enqueue_style('fontawesome-style', get_template_directory_uri() . '/css/font-awesome.min.css');
-		wp_enqueue_style('main-style', get_template_directory_uri() . '/css/main.css');
-
-		wp_enqueue_script('modernizr-script', get_template_directory_uri() . '/js/vendor/modernizr.min.js');
-		wp_enqueue_script('respond-script', get_template_directory_uri() . '/js/vendor/respond.min.js');
-		wp_enqueue_script('html5-shiv-script', get_template_directory_uri() . '/js/vendor/html5shiv.js');
-		wp_enqueue_script('jquery');
-		wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/js/vendor/bootstrap.min.js', array(), false, true);
-		wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array(), false, true);
-		wp_enqueue_style('bootstrap-basic-style', get_stylesheet_uri());
-	}// bootstrapBasicEnqueueScripts
-}
-add_action('wp_enqueue_scripts', 'bootstrapBasicEnqueueScripts');
-
+// NAV MENU
+require_once 'inc/wp_bootstrap_navwalker.php';
+register_nav_menus( array(
+    'primary' => __( 'Header Menu', 'main' ),
+) );
 
 /**
- * admin page displaying help.
+ * Generates a single header tag.
+ *
+ * @param string $type Tag type. 'css' for a link tag and 'js' for a script tag.
+ * @param string $url Location of the resource.
  */
-if (is_admin()) {
-	require get_template_directory() . '/inc/BootstrapBasicAdminHelp.php';
-	$bbsc_adminhelp = new BootstrapBasicAdminHelp();
-	add_action('admin_menu', array($bbsc_adminhelp, 'themeHelpMenu'));
-	unset($bbsc_adminhelp);
+function rimy_header_tag ( $type, $url ) {
+    if ( $type == 'css' ) {
+        echo str_replace ('%URL%', $url, PATTERN_STYLE );
+    } elseif ( $type == 'js' ) {
+        echo str_replace( '%URL%', $url, PATTERN_SCRIPT );
+    }
+    echo "\n";
 }
 
 
 /**
- * Custom template tags for this theme.
+ * Creates a set of import headers. It receives any amount of parameters, but only checks for 'jquery', 'bootstrap'
+ * and 'fontawesome'.
  */
-require get_template_directory() . '/inc/template-tags.php';
+function rimy_load_lib () {
+    $libs = func_get_args();
+
+    if ( in_array( 'jquery', $libs ) || in_array( 'bootstrap', $libs ) ) {
+        rimy_header_tag( 'js', ASSETS_LIB_URL . 'js/jquery-1.12.1.min.js' );
+    }
+    if ( in_array( 'bootstrap', $libs ) ) {
+        rimy_header_tag( 'js', ASSETS_LIB_URL . 'js/bootstrap.min.js' );
+        rimy_header_tag( 'css', ASSETS_LIB_URL . 'css/bootstrap.min.css' );
+    }
+    if ( in_array( 'fontawesome', $libs ) ) {
+        rimy_header_tag( 'css', ASSETS_LIB_URL . 'css/font-awesome.css' );
+    }
+    if ( in_array( 'scrollto', $libs ) ) {
+        rimy_header_tag( 'js', ASSETS_LIB_URL . 'js/jquery.scrollTo.min.js' );
+    }
+
+}
 
 
 /**
- * Custom functions that act independently of the theme templates.
+ * Creates the breadcrumb
  */
-require get_template_directory() . '/inc/extras.php';
-
-
-/**
- * Custom dropdown menu and navbar in walker class
- */
-require get_template_directory() . '/inc/BootstrapBasicMyWalkerNavMenu.php';
-
-
-/**
- * Template functions
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-
-/**
- * --------------------------------------------------------------
- * Theme widget & widget hooks
- * --------------------------------------------------------------
- */
-require get_template_directory() . '/inc/widgets/BootstrapBasicSearchWidget.php';
-require get_template_directory() . '/inc/template-widgets-hook.php';
-
+function the_breadcrumb () {
+    if (!is_home()) {
+        echo '<div class="container-fluid breadcrumb-row"><ol class="breadcrumb container">';
+        echo '<li><a href="' . home_url() . '">';
+        bloginfo('name');
+        echo '</a></li>';
+        if (is_category() || is_single()) {
+            echo '<li><a href="#">Blog</a></li>';
+            if (is_single()) {
+                echo '<li class="active">';
+                the_title();
+                echo '</li>';
+            }
+        } elseif (is_page()) {
+            echo '<li class="active">';
+            echo the_title();
+            echo '</li>';
+        }
+        echo '</ol></div>';
+    }
+}

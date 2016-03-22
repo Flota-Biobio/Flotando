@@ -1,0 +1,72 @@
+/*
+ * Proyecto Flota Biobío
+ * Aplicación WEB
+ *
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
+ *
+ * Los archivos incluidos en el presente proyecto, si bien fueron implementados
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
+ *
+ * @copyright   Copyright 2015 Flota Biobio
+ * @license     Apache License, Version 2.0
+ */
+ 
+/*
+ * HOJA DE ESTILOS
+ * footer
+ *
+ * Estilos para el footer global
+ * 
+ * Author:  George Shazkho <shazkho@gmail.com>
+ * Version: 0.6
+ * Since:   0.3.5
+ */
+
+.footer .container {
+    background-color: transparent;
+}
+
+.footer .content {
+    position: relative;
+}
+
+.footer .content .background {
+    background: url('../img/logo_vertical.png') no-repeat right;
+    background-size: contain;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 100px;
+    position: absolute;
+}
+
+.footer .signature {
+
+}
+
+.footer .signature span {
+    padding-bottom: 5px;
+    display: block;
+    font-size: 13px;
+    color: #ccc;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+.footer .logo {
+
+}
+
+.footer .logo img {
+    height: 100px;
+    width: auto;
+    opacity: 0.5;
+}
+
+
+

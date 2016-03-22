@@ -1,0 +1,120 @@
+/*
+ * Proyecto Flotando
+ * Tema de WordPress
+ * @copyright   Copyright 2016 George Shazkho
+ * @license     Apache License, Version 2.0
+ */
+
+/*
+ * HOJA DE ESTILOS
+ * Header
+ *
+ * Hoja de estilos para la vista "header"
+ *
+ * @author  George Shazkho <shazkho@gmail.com>
+ * @version 1
+ * @since   0.1.3
+ */
+
+.header {
+    height: 110px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+
+.header .navbar {
+    height: 60px;
+    margin: 25px 0;
+    padding: 0;
+    border: none;
+}
+
+.header .navbar .navbar-collapse {
+    margin-top: 5px;
+}
+
+.header .container-fluid {
+    padding: 0;
+}
+
+.header .navbar .dropdown-toggle,
+.header .navbar .dropdown-toggle:active,
+.header .navbar .dropdown-toggle:visited,
+.header .navbar .link a,
+.header .navbar .link a:active,
+.header .navbar .link a:visited{
+    color: white;
+}
+
+.header .navbar .dropdown-toggle:hover,
+.header .navbar .link a:hover,
+.header .navbar .navbar-nav .open a {
+    color: white;
+    background-color: #0189c6;
+}
+
+.header .navbar .dropdown-menu {
+    background-color: #0189c6;
+}
+
+.header .navbar .dropdown-menu a {
+    font-weight: 300;
+    color: white;
+}
+
+.header .navbar .dropdown-menu a:hover,
+.header .navbar .navbar-btn:hover {
+    background-color: #0188c5;
+}
+
+.header .navbar .session {
+    margin-right: -30px;
+}
+
+
+.header a.logo {
+    height: 100%;
+    padding: 0;
+}
+
+.header div.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.header .nav-menu {
+    font-size: 16px;
+    line-height: 50px;
+}
+
+.header .session-box {
+    margin-top: 30px;
+}
+
+.header .session {
+    margin-left: 15px;
+}
+
+.header .session button {
+    height: 35px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.header .navbar .nav-link {
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.breadcrumb-row {
+    background-color: rgba(244, 244, 244, 1);
+    margin-bottom: 30px;
+}
+
+.breadcrumb-row .breadcrumb {
+    background-color: transparent;
+    margin-bottom: 0;
+}

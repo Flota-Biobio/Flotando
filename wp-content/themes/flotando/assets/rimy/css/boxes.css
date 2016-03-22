@@ -1,0 +1,61 @@
+/*
+ * Proyecto Flota Biobío
+ * Aplicación WEB
+ *
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
+ *
+ * Los archivos incluidos en el presente proyecto, si bien fueron implementados
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
+ *
+ * @copyright   Copyright 2015 Flota Biobio
+ * @license     Apache License, Version 2.0
+ */
+
+/*
+ * HOJA DE ESTILOS
+ * boxes
+ *
+ * Hoja de estilos para la vista "boxes"
+ *
+ * @author  George Shazkho <shazkho@gmail.com>
+ * @version 0.5.1
+ * @since   0.1.6
+ */
+
+.boxes .content {
+    z-index: 2;
+    padding: 15px;
+}
+
+.boxes .box {
+}
+
+.boxes .box .fa-circle {
+    font-size: 200px;
+}
+
+.boxes .box span,
+.boxes .box i{
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.boxes .box .fa-stack {
+    font-size: 70px;
+    line-height: 200px;
+    height: 200px;
+}
+
+.boxes .title {
+font-size: 20px;
+    text-transform: uppercase;
+}
+
+.boxes .box button {
+    margin-top: 15px;
+}

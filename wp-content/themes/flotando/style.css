@@ -3,137 +3,167 @@ Theme Name: Flotando
 Theme URI: 
 Author: George Shazkho
 Author URI: http://shazkho.cl
-Description: Tema creado originalmente para Flota Biobio, basado en Bootsrap Basic.
-Version: 1
+Description: Tema creado originalmente para Flota Biobio.
+Version: 0.0.1
 License: Apache 2.0
 License URI: http://www.apache.org/licenses/LICENSE-2.0
 Text Domain: flotando
 Domain Path: /languages/
-Tags: white, gray, light, one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, front-page-post-form, post-formats, threaded-comments, translation-ready
+Tags: flota flotabiobio flota-biobio flotando shazkho george-shazkho
 
-Tema construido con Bootstrap v.3.
+Tema construido con Bootstrap 3.
 
 */
 
 
 /*
-Required WordPress CSS
-*/
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
-}
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
-}
-.bypostauthor {
-}
+ * HOJA DE ESTILOS
+ * base
+ *
+ * Hoja de estilos base, la que será cargada en cada vista del sitio.
+ *
+ * Author:  George Shazkho <shazkho@gmail.com>
+ * Version: 1
+ * Since:   0.1.1
+ */
 
 
-/* WordPress gallery */
-.gallery-caption {
-}
-.gallery {
-	margin-bottom: 1.6em;
-}
-.gallery-item {
-	display: inline-block;
-	padding: 1.79104477%;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
-}
-.gallery-columns-2 .gallery-item {
-	max-width: 50%;
-}
-.gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
-}
-.gallery-columns-4 .gallery-item {
-	max-width: 25%;
-}
-.gallery-columns-5 .gallery-item {
-	max-width: 20%;
-}
-.gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
-}
-.gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
-}
-.gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
-}
-.gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
-}
-.gallery-icon img {
-	margin: 0 auto;
-}
-.gallery-caption {
-	color: #707070;
-	color: rgba(51, 51, 51, 0.7);
-	display: block;
-	font-family: "Noto Sans", sans-serif;
-	font-size: 12px;
-	font-size: 1.2rem;
-	line-height: 1.5;
-	padding: 0.5em 0;
-}
-.gallery-columns-6 .gallery-caption,
-.gallery-columns-7 .gallery-caption,
-.gallery-columns-8 .gallery-caption,
-.gallery-columns-9 .gallery-caption {
-	display: none;
-}
+/*
+ * COLORS
+ * main:   #519ff4
+ * accent: #a351f4
+ */
+
+/* Foreground */
+.color-main-80 { color: #dcecfd; }
+.color-main-60 { color: #b8d8fa; }
+.color-main-40 { color: #96c4f7; }
+.color-main-20 { color: #74b1f5;}
+.color-main { color: #029ee3;}
+.color-accent-80 { color: #ecdbfc; }
+.color-accent-60 { color: #d9b8fa; }
+.color-accent-40 { color: #c796f7; }
+.color-accent-20 { color: #b474f5; }
+.color-accent { color: #a251f3; }
+.color-white { color: white; }
+.color-gray-killa { color: #a5a5a5 }
+.color-gray-90 { color: #e0e0e0; }
+.color-gray-80 { color: #cbcbcb; }
+.color-gray-70 { color: #b2b2b2; }
+.color-gray-60 { color: #989898; }
+.color-gray-40 { color: #666666; }
+.color-gray-20 { color: #333333; }
+.color-black { color: black; }
+.color-red { color: #d9534f; }
+
+/* Background */
+.background-main-80 { background-color: #dcecfd; }
+.background-main-60 { background-color: #b8d8fa; }
+.background-main-40 { background-color: #96c4f7; }
+.background-main-20 { background-color: #74b1f5; }
+.background-main { background-color: #4fb9e6; }
+.background-accent-80 { background-color: #ecdbfc; }
+.background-accent-60 { background-color: #d9b8fa; }
+.background-accent-40 { background-color: #c796f7; }
+.background-accent-20 { background-color: #b474f5; }
+.background-accent { background-color: #a251f3; }
+.background-black { background-color: black; }
+.background-gray-5 { background-color: #0D0D0D; }
+.background-gray-10 { background-color: #1A1A1A; }
+.background-gray-15 { background-color: #262626; }
+.background-gray-20 { background-color: #333333; }
+.background-gray-25 { background-color: #404040; }
+.background-gray-30 { background-color: #4D4D4D; }
+.background-gray-35 { background-color: #595959; }
+.background-gray-40 { background-color: #666666; }
+.background-gray-45 { background-color: #737373; }
+.background-gray-50 { background-color: #808080; }
+.background-gray-55 { background-color: #8C8C8C; }
+.background-gray-60 { background-color: #999999; }
+.background-gray-65 { background-color: #A6A6A6; }
+.background-gray-70 { background-color: #B3B3B3; }
+.background-gray-75 { background-color: #C0C0C0; }
+.background-gray-80 { background-color: #CDCDCD; }
+.background-gray-85 { background-color: #D9D9D9; }
+.background-gray-90 { background-color: #E5E5E5; }
+.background-gray-95 { background-color: #f7f7f7; }
+.background-gray-98 { background-color: #fefefe; }
+.background-white { background-color: white; }
+
+/* Social networks */
+.color-facebook { color: #3b5998; }
+.color-twitter { color: #9AE4E8; }
+.color-google-plus { color: #dc4b39; }
+.color-deviantart { color: #05cb47; }
+.color-linkedin { color: #0077b3; }
 
 
-.sticky {
-}
-.wp-caption {
-	border: 1px solid #ccc;
-	margin-bottom: 1.5em;
-	max-width: 100%;
-}
-.wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin: 1.2% auto 0;
-	max-width: 98%;
-}
-.wp-caption-text {
-	text-align: center;
-}
-.wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
-}
-/* Text meant only for screen readers. */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
+
+/* BORDERS */
+.border-black,
+.border-gray-5, .border-gray-10, .border-gray-15, .border-gray-20,
+.border-gray-25, .border-gray-30, .border-gray-35, .border-gray-40,
+.border-gray-45, .border-gray-50, .border-gray-55, .border-gray-60,
+.border-gray-65, .border-gray-70, .border-gray-75, .border-gray-80,
+.border-gray-85, .border-gray-90, .border-gray-95, .border-white { border: solid 1px; }
+
+.border-black { border-color: black; }
+.border-gray-5 { border-color: #0D0D0D; }
+.border-gray-10 { border-color: #1A1A1A; }
+.border-gray-15 { border-color: #262626; }
+.border-gray-20 { border-color: #333333; }
+.border-gray-25 { border-color: #404040; }
+.border-gray-30 { border-color: #4D4D4D; }
+.border-gray-35 { border-color: #595959; }
+.border-gray-40 { border-color: #666666; }
+.border-gray-45 { border-color: #737373; }
+.border-gray-50 { border-color: #808080; }
+.border-gray-55 { border-color: #8C8C8C; }
+.border-gray-60 { border-color: #999999; }
+.border-gray-65 { border-color: #A6A6A6; }
+.border-gray-70 { border-color: #B3B3B3; }
+.border-gray-75 { border-color: #C0C0C0; }
+.border-gray-80 { border-color: #CDCDCD; }
+.border-gray-85 { border-color: #D9D9D9; }
+.border-gray-90 { border-color: #E5E5E5; }
+.border-gray-95 { border-color: #F2F2F2; }
+.border-white { border-color: white; }
+.no-border-top { border-top: none !important; }
+.no-border-bottom { border-bottom: none !important; }
+.no-border-left { border-left: none !important; }
+.no-border-right { border-right: none !important; }
+
+
+/* SHADOWS */
+.shadowed {
+    -webkit-box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.4);
 }
 
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+.button-shadow {
+    -webkit-box-shadow: 0 0 9px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 9px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 9px 2px rgba(0, 0, 0, 0.4);
 }
+
+/* LAYOUT */
+
+.space-15, .pace-30 { background-color: transparent; }
+.space-15 { height: 15px; }
+.space-30 { height: 30px; }
+
+
+/* TEXT */
+
+html, body { font-family: "Roboto", sans-serif; }
+.non-italics { font-style: normal; }
+.font-100 { font-weight: 100; }
+.font-200 { font-weight: 200; }
+.font-300 { font-weight: 300; }
+.font-400 { font-weight: 400; }
+.font-500 { font-weight: 500; }
+.font-600 { font-weight: 600; }
+.font-700 { font-weight: 700; }
+.font-800 { font-weight: 800; }
+.font-900 { font-weight: 900; }

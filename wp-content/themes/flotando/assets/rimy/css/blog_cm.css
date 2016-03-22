@@ -1,0 +1,129 @@
+/*
+ * Proyecto Flota Biobío
+ * Aplicación WEB
+ *
+ * Prototipo por Aníbal Llanos Prado
+ * Basado en el trabajo del equipo de Flota Biobío
+ *
+ * Los archivos incluidos en el presente proyecto, si bien fueron implementados
+ * y diseñados (en su forma) por Aníbal Llanos Prado, sus derechos de propiedad
+ * se declaran por el mismo como propiedad de la organización presente del
+ * equipo de Flota Biobío, propiedad que será transferida a quienes cumplan la
+ * anteriormente declarada condición.
+ *
+ * @copyright   Copyright 2015 Flota Biobio
+ * @license     Apache License, Version 2.0
+ */
+
+/*
+ * HOJA DE ESTILOS
+ * blog_cm
+ *
+ * Hoja de estilos para el blog principal y la sección de community management
+ *
+ * Author:  George Shazkho <shazkho@gmail.com>
+ * Version: 0.4.6
+ * Since:   0.3.0
+ */
+
+.blog-cm {
+    font-family: "Roboto", sans-serif;
+}
+
+.blog-cm .container {
+    background-color: transparent;
+}
+
+.blog-cm .space-30 {
+    margin: 15px -15px 15px -15px;
+}
+
+.blog-cm .separator {
+    width: 100%;
+    height: 1px;
+    margin: 15px 0;
+    background-color:  #ddd;
+}
+
+.blog-cm .blog-title {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.blog-cm .post {
+
+}
+
+.blog-cm .title {
+    margin: 10px 0 5px 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.blog-cm .category {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-top: 0;
+}
+
+.blog-cm .author,
+.blog-cm .time,
+.blog-cm .category{
+    color: #777;
+    font-size: 12px;
+    display: block;
+}
+
+.blog-cm .post img {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 300px;
+    width:100%;
+}
+
+.blog-cm .desc {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.blog-cm .button-div {
+    margin-bottom: 30px;
+}
+
+.blog-cm .button-div a i {
+    margin-left: 5px;
+}
+
+
+/* COMMUNITY MANAGEMENT */
+
+.blog-cm .cm {
+    padding-right: 0;
+}
+
+.blog-cm .cm .cm-col {
+    margin-left: 15px;
+    margin-right: -15px;
+    width: calc(100% - 30px);
+}
+
+.blog-cm .cm img {
+    border: solid 1px #ddd;
+}
+
+.blog-cm .cm .network {
+    margin-right: 0;
+}
+
+.blog-cm .cm .cm-row-inner {
+    padding-bottom: 15px;
+}
+
+.blog-cm .cm h2 {
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+
+
