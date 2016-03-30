@@ -41,7 +41,7 @@ $slider = array(
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <?php foreach ($slider as $pos => $slide): ?>
-                    <li data-target="#home-slider" <?= $pos==0 ? 'class="active' : '' ?> data-slide-to="<?=$pos?>"></li>
+                    <li data-target="#home-slider" <?= $pos==0 ? 'class="active"' : '' ?> data-slide-to="<?=$pos?>"></li>
                     <?php endforeach ?>
                 </ol>
 
@@ -51,7 +51,7 @@ $slider = array(
                     <?php foreach ($slider as $pos => $slide): ?>
                     <div class="item<?=$pos==0 ? ' active' : ''?>">
                         <a href="<?=$slide->link?>" target="_blank">
-                            <img src="<?= ASSETS_IMG_URL ?>uploaded/slider/full/<?=$slide->image?>" title="<?=$slide->title?>" class="slide" />
+                            <img alt="Flota Biobio" src="<?= ASSETS_IMG_URL ?>uploaded/slider/full/<?=$slide->image?>" title="<?=$slide->title?>" class="slide" />
                         </a>
                         <div class="carousel-caption">
                             <?=$slide->caption?>

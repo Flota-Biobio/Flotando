@@ -11,7 +11,7 @@ get_header(); ?>
 <?php rimy_header_tag('css', ASSETS_CSS_URL . 'post.css') ?>
 <div id="primary" class="content-area container">
 
-    <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main">
 
         <?php
         // Start the loop.

@@ -3,6 +3,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width">
+    <title>Flota Biobio</title>
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
@@ -16,8 +17,6 @@
     <?php rimy_header_tag('js', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js') ?>
     <?php rimy_header_tag('js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js') ?>
     <?php rimy_header_tag('js', 'http://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js') ?>
-
-    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
     <!-- CSS -->
     <?php rimy_header_tag('css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css') ?>

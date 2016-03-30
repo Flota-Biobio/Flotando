@@ -14,7 +14,7 @@
 get_header(); ?>
 <?php rimy_header_tag( 'css', ASSETS_CSS_URL . 'page.css' ) ?>
 <div id="primary" class="content-area container page-template">
-    <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main">
         <?php
         // Start the loop.
         while ( have_posts() ) : the_post();
@@ -30,11 +30,7 @@ get_header(); ?>
             // End of the loop.
         endwhile;
         ?>
-
     </main><!-- .site-main -->
-
-    <?php //get_sidebar( 'content-bottom' ); ?>
-
 </div><!-- .content-area -->
 
 <?php get_footer(); ?>

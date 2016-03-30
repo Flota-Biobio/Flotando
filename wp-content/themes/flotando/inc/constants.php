@@ -12,4 +12,4 @@ define( 'ASSETS_JS_URL', ASSETS_URL . 'js/' );
 define( 'ASSETS_FONTS_URL', ASSETS_URL . 'fonts/' );
 
 define('PATTERN_SCRIPT', '<script src="%URL%" type="text/javascript"></script>');
-define('PATTERN_STYLE', '<link href="%URL%" rel="stylesheet" type="text/css">');
+define('PATTERN_STYLE', '<link href="%URL%" rel="stylesheet" property="stylesheet" type="text/css">');
